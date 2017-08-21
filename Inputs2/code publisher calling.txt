@@ -1,0 +1,9 @@
+std::vector<std::string> files = FileSystem::Directory::getFiles("../ServerInputFiles/", "*.*");
+  std::cout << "the size of files is--->" << files.size();
+  for (int i = 0; i < files.size(); i++)
+  {
+	  files[i] = "..\\ServerInputFiles\\" + files[i];
+  }
+  publisher pub;
+  pub.startingpoint(files);
+  return true;
